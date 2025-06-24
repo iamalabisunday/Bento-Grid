@@ -1,0 +1,304 @@
+:root {
+  /* Colors */
+  --Purple-1: hsl(254, 88%, 90%);
+  --Purple-5: hsl(256, 67%, 59%);
+  --Yellow-1: hsl(31, 66%, 93%);
+  --Yellow-5: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --FontParagraph: 1.125rem;
+
+  /* Weights */
+  --weight4: 400;
+  --weight5: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 96%);
+  padding: 2rem;
+}
+
+/* Main bento grid section */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+section {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seventh Section - Create Content (Top Left) */
+.seven {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--Yellow-1);
+  gap: 1rem;
+}
+
+.seven p {
+  font-size: 1.6rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+  line-height: 1.1;
+}
+
+.seven span {
+  color: var(--Purple-5);
+  font-style: italic;
+}
+
+.seven img {
+  width: 100%;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' fill='%23666'%3E%3Crect x='40' y='20' width='120' height='80' rx='8' fill='%23f0f0f0'/%3E%3Ctext x='100' y='65' text-anchor='middle' font-size='12'%3ECreate Post%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+/* First Section - Hero (Top Center, spans 2 columns) */
+.first {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  background-color: var(--Purple-5);
+  color: white;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.first .title {
+  font-size: 3rem;
+  font-weight: var(--weight5);
+  line-height: 0.9;
+  max-width: 400px;
+}
+
+.first .num {
+  color: var(--Yellow-5);
+}
+
+.first .txt {
+  font-style: italic;
+}
+
+.star-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star-img {
+  width: 200px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cg fill='%23FFD700'%3E%3Cpath d='M20 5l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z'/%3E%3Cpath d='M60 5l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z'/%3E%3Cpath d='M100 5l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z'/%3E%3Cpath d='M140 5l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z'/%3E%3Cpath d='M180 5l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+.star-txt p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Fourth Section - Schedule Posts (Top Right, spans 3 rows) */
+.four {
+  grid-column: 4;
+  grid-row: 1 / 4;
+  background-color: var(--Purple-1);
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.four p {
+  font-size: 1.1rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+}
+
+.four img {
+  width: 100%;
+  height: 200px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='%23666'%3E%3Crect x='20' y='20' width='160' height='160' rx='8' fill='%23f0f0f0'/%3E%3Ctext x='100' y='105' text-anchor='middle' font-size='12'%3EBest Time to Post%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+.four .para {
+  font-size: 0.9rem;
+  color: var(--Black);
+  opacity: 0.8;
+}
+
+/* Eighth Section - AI Content (Middle Left) */
+.eight {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: var(--Yellow-5);
+  gap: 1rem;
+}
+
+.eight p {
+  font-size: 1.4rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+  line-height: 1.1;
+}
+
+.eight img {
+  width: 100%;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23666'%3E%3Ccircle cx='100' cy='50' r='30' fill='%23f0f0f0'/%3E%3Ctext x='100' y='55' text-anchor='middle' font-size='12'%3EAI%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+/* Second Section - Multiple Platforms (Middle Center-Left) */
+.second {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: var(--White);
+  gap: 1rem;
+}
+
+.social-img {
+  width: 100%;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' fill='%23666'%3E%3Crect x='20' y='20' width='40' height='40' rx='8'/%3E%3Crect x='80' y='20' width='40' height='40' rx='8'/%3E%3Crect x='140' y='20' width='40' height='40' rx='8'/%3E%3Ctext x='100' y='90' text-anchor='middle' font-size='12'%3ESocial Platforms%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+.second p {
+  font-size: 1.1rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+}
+
+/* Third Section - Consistent Schedule (Middle Center-Right) */
+.third {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: var(--Yellow-5);
+  gap: 1rem;
+}
+
+.third p {
+  font-size: 1.4rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+  line-height: 1.2;
+}
+
+.third img {
+  width: 100%;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23333'%3E%3Crect x='20' y='20' width='160' height='60' rx='8' fill='%23fff'/%3E%3Ctext x='100' y='55' text-anchor='middle' font-size='14'%3ESchedule%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+/* Sixth Section - Audience Growth (Bottom Left) */
+.six {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: var(--White);
+  gap: 1rem;
+}
+
+.six p {
+  font-size: 1rem;
+  color: var(--Black);
+}
+
+.six .num span {
+  font-size: 3rem;
+  font-weight: var(--weight5);
+  color: var(--Black);
+  display: block;
+  line-height: 0.8;
+}
+
+.six img {
+  width: 100%;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80' fill='%23666'%3E%3Cpath d='M20 60 L50 45 L80 50 L110 35 L140 40 L170 25' stroke='%2366f' stroke-width='2' fill='none'/%3E%3Ctext x='100' y='75' text-anchor='middle' font-size='10'%3EAudience Growth%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+/* Fifth Section - Grow Followers (Bottom Center, spans 2 columns) */
+.five {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  background-color: var(--Purple-5);
+  color: var(--White);
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.five img {
+  width: 200px;
+  height: 100px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23fff'%3E%3Cpath d='M50 80 L70 60 L90 70 L110 50 L130 60 L150 40' stroke='%23fff' stroke-width='3' fill='none'/%3E%3Ctext x='100' y='95' text-anchor='middle' font-size='10'%3EGrowth Chart%3C/text%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: contain;
+}
+
+.five p {
+  font-size: 1.8rem;
+  font-weight: var(--weight5);
+  line-height: 1.1;
+}
+
+/* Mobile Media Section */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .first,
+  .second,
+  .third,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .first .title {
+    font-size: 2rem;
+  }
+}
